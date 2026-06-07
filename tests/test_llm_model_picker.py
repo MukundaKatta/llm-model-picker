@@ -65,6 +65,12 @@ def test_model_spec_to_dict():
     assert d["combined_cost_per_1m"] == 3.0
 
 
+def test_model_spec_to_dict_includes_notes():
+    m = ModelSpec("m", "p", 1.0, 2.0, 4096, notes="experimental")
+    d = m.to_dict()
+    assert d["notes"] == "experimental"
+
+
 def test_model_spec_repr():
     m = ModelSpec("mymodel", "openai", 5.0, 15.0, 128_000)
     r = repr(m)

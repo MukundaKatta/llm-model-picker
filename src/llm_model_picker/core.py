@@ -73,6 +73,7 @@ class ModelSpec:
             "supports_tools": self.supports_tools,
             "supports_json_mode": self.supports_json_mode,
             "supports_streaming": self.supports_streaming,
+            "notes": self.notes,
             "combined_cost_per_1m": self.combined_cost_per_1m,
         }
 
